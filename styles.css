@@ -1,0 +1,13 @@
+.calBase{
+    height: 500px;
+    width: 350px;
+    background-color: gray;
+    padding: 10px;
+    
+}
+
+#display{
+    height: 100px;
+    background-color: #b2cf93;
+    display: flex;
+}
