@@ -75,9 +75,7 @@ equal.addEventListener('click', ()=>{
     //removing the expression to show the result 
     const expression=document.querySelectorAll('.exp');
     expression.forEach(element => element.remove() );
-
-
-   num=(operate(operator,num,num1)); 
+    num=(operate(operator,num,num1)); 
    const result=document.createElement('div');
    result.textContent=num;
    result.classList.add('exp')
@@ -86,4 +84,10 @@ equal.addEventListener('click', ()=>{
 
 })
 
-
+// making the AC button functional 
+const AC = document.querySelector('#AC');
+AC.addEventListener('click', ()=>{
+    const expression=document.querySelectorAll('.exp');
+    expression.forEach(element => element.remove() );
+    num=[], num1=[], operator="";
+})
