@@ -48,6 +48,8 @@ numbers.forEach((button) =>{
     
     const number=document.createElement('div');
     number.textContent=button.textContent;
+    number.classList.add('exp')
+
     display.appendChild(number);
     
     })
@@ -59,17 +61,29 @@ operators.forEach((button) =>{
     operator=button.textContent;
     const operatordiv=document.createElement('div');
     operatordiv.textContent=button.textContent;
+    operatordiv.classList.add('exp')
     display.appendChild(operatordiv);
     })
 });
 
 const equal =document.querySelector('#equal');
 equal.addEventListener('click', ()=>{
-    num=parseInt(num.join(""));
-    console.log(num);
+    if(Array.isArray(num)){
+        num=parseInt(num.join(""));
+    }
     num1=parseInt(num1.join(""));
-    console.log(num1);
-   console.log(operate(operator,num,num1)); 
+    //removing the expression to show the result 
+    const expression=document.querySelectorAll('.exp');
+    expression.forEach(element => element.remove() );
+
+
+   num=(operate(operator,num,num1)); 
+   const result=document.createElement('div');
+   result.textContent=num;
+   result.classList.add('exp')
+   display.appendChild(result);
+   num1=[];
+
 })
 
 
