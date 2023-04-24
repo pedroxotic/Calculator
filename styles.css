@@ -37,7 +37,7 @@
   .btn,
   .op,
   #equal,
-  #AC {
+  #AC, #delete, #dot{
     background-color: #f0f0f0;
     color: #333;
     font-size: 24px;
@@ -50,12 +50,12 @@
   .btn:hover,
   .op:hover,
   #equal:hover,
-  #AC:hover {
+  #AC:hover, #delete:hover, #dot:hover {
     background-color: #333;
     color: #fff;
   }
   
-  .op {
+  .op, #delete, #dot {
     background-color: #d3d3d3;
   }
   
